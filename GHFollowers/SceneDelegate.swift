@@ -17,10 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        //nav controller
+        let searchNC = UINavigationController(rootViewController: SearchVC())
+        let favoritesNC = UINavigationController(rootViewController: FavoriteListVC())
+        
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [searchNC, favoritesNC]
+        
         //make window fill up whole screen
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = UITabBarController()
         //show the vc
         window?.makeKeyAndVisible()
     }
