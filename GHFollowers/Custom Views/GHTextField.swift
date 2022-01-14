@@ -27,7 +27,7 @@ class GHTextField: UITextField {
         font = UIFont.preferredFont(forTextStyle: .title2)
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
-        placeholder = "Search"
+        returnKeyType = .go
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
         //for storyboard autolayout
