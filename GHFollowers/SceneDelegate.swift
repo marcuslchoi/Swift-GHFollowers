@@ -18,21 +18,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        //nav controller
-        let searchNC = UINavigationController(rootViewController: SearchVC())
-        let favoritesNC = UINavigationController(rootViewController: FavoriteListVC())
-        
-        let tabBar = UITabBarController()
-        tabBar.viewControllers = [searchNC, favoritesNC]
-        
         //make window fill up whole screen
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = UITabBarController()
+        window?.rootViewController = createTabBarController()
+        configureNavBar()
         //show the vc
         window?.makeKeyAndVisible()
     }
+    
+    //ui of nav bar
+    func configureNavBar() {
+        UINavigationBar.appearance().tintColor = .systemGreen
+    }
+    
+    
+    func createSearchNC() -> UINavigationController {
+        let searchVC = SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    func createFavoritesNC() -> UINavigationController {
+        let favoritesVC = FavoriteListVC()
+        favoritesVC.title = "Favorites"
+        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        return UINavigationController(rootViewController: favoritesVC)
+    }
 
+    func createTabBarController() -> UITabBarController {
+        let tabBar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabBar.viewControllers = [createSearchNC(), createFavoritesNC()]
+        return tabBar
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
