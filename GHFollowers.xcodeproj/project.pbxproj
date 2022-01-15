@@ -19,7 +19,7 @@
 		2CA148AD27922D2C00EC2078 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148AC27922D2C00EC2078 /* User.swift */; };
 		2CA148AF27922D3600EC2078 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148AE27922D3600EC2078 /* Follower.swift */; };
 		2CA148B127922FC600EC2078 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B027922FC600EC2078 /* NetworkManager.swift */; };
-		2CA148B527924BA200EC2078 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B427924BA200EC2078 /* ErrorMessage.swift */; };
+		2CA148B527924BA200EC2078 /* GHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B427924BA200EC2078 /* GHError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		2CA148AC27922D2C00EC2078 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CA148AE27922D3600EC2078 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		2CA148B027922FC600EC2078 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		2CA148B427924BA200EC2078 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		2CA148B427924BA200EC2078 /* GHError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		2CA148B327924B8400EC2078 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2CA148B427924BA200EC2078 /* ErrorMessage.swift */,
+				2CA148B427924BA200EC2078 /* GHError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			files = (
 				2CA148A22791F9FD00EC2078 /* GHButton.swift in Sources */,
 				2CA148AF27922D3600EC2078 /* Follower.swift in Sources */,
-				2CA148B527924BA200EC2078 /* ErrorMessage.swift in Sources */,
+				2CA148B527924BA200EC2078 /* GHError.swift in Sources */,
 				2CA148B127922FC600EC2078 /* NetworkManager.swift in Sources */,
 				2CA148A02790E08400EC2078 /* FavoriteListVC.swift in Sources */,
 				2CA148A42791FA2500EC2078 /* GHTextField.swift in Sources */,

@@ -13,7 +13,7 @@ class NetworkManager {
     
     let baseUrl = "https://api.github.com/users/"
     //completion handler takes a list of followers or error description
-    func getFollowers(username: String, page: Int, completion: @escaping ([Follower]?, ErrorMessage?) -> Void)
+    func getFollowers(username: String, page: Int, completion: @escaping ([Follower]?, GHError?) -> Void)
     {
         //returning 100 results per page
         let endpoint = baseUrl + "\(username)/followers?per_page=100&page=\(page)"
