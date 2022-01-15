@@ -18,13 +18,15 @@ class FollowerListVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        NetworkManager.shared.getFollowers(username: searchUsername, page: 1) { followers, errorMsg in
-            guard let followers = followers else {
-                print(errorMsg?.rawValue)
-                return
-            }
+        NetworkManager.shared.getFollowers(username: searchUsername, page: 1) { result in
             
-            print(followers)
+            switch result
+            {
+                case .success(let followers):
+                    print(followers)
+                case .failure(let ghError):
+                    print(ghError.rawValue)
+            }
         }
     }
 
