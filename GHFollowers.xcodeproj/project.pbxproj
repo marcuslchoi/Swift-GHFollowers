@@ -20,6 +20,7 @@
 		2CA148AF27922D3600EC2078 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148AE27922D3600EC2078 /* Follower.swift */; };
 		2CA148B127922FC600EC2078 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B027922FC600EC2078 /* NetworkManager.swift */; };
 		2CA148B527924BA200EC2078 /* GHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B427924BA200EC2078 /* GHError.swift */; };
+		2CA148B727936BBB00EC2078 /* GHFollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148B627936BBB00EC2078 /* GHFollowerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2CA148AE27922D3600EC2078 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		2CA148B027922FC600EC2078 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2CA148B427924BA200EC2078 /* GHError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHError.swift; sourceTree = "<group>"; };
+		2CA148B627936BBB00EC2078 /* GHFollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFollowerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				2CA148A12791F9FD00EC2078 /* GHButton.swift */,
 				2CA148A32791FA2500EC2078 /* GHTextField.swift */,
+				2CA148B627936BBB00EC2078 /* GHFollowerCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				2CA148AF27922D3600EC2078 /* Follower.swift in Sources */,
 				2CA148B527924BA200EC2078 /* GHError.swift in Sources */,
 				2CA148B127922FC600EC2078 /* NetworkManager.swift in Sources */,
+				2CA148B727936BBB00EC2078 /* GHFollowerCell.swift in Sources */,
 				2CA148A02790E08400EC2078 /* FavoriteListVC.swift in Sources */,
 				2CA148A42791FA2500EC2078 /* GHTextField.swift in Sources */,
 				2CA1489E2790DFF600EC2078 /* SearchVC.swift in Sources */,
