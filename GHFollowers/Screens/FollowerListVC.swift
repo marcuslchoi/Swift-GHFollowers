@@ -9,12 +9,14 @@ import UIKit
 
 class FollowerListVC: UIViewController {
 
-    var searchUsername = ""
+    var searchUsername: String!
+    var followerCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        addFollowerCollectionView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,4 +32,11 @@ class FollowerListVC: UIViewController {
         }
     }
 
+    func addFollowerCollectionView()
+    {
+        followerCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        view.addSubview(followerCollectionView)
+        //followerCollectionView.backgroundColor = .systemPink
+        followerCollectionView.register(GHFollowerCell.self, forCellWithReuseIdentifier: GHFollowerCell.reuseId)
+    }
 }
