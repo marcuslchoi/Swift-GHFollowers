@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
+    let cache = NSCache<NSString, UIImage>()
     private init() {}
     
-    let baseUrl = "https://api.github.com/users/"
+    private let baseUrl = "https://api.github.com/users/"
     //completion handler takes a list of followers or error description
     func getFollowers(username: String, page: Int, completion: @escaping (Result<[Follower], GHError>) -> Void)
     {
