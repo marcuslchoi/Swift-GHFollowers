@@ -35,8 +35,9 @@ class FollowerListVC: UIViewController {
     
     func getFollowers()
     {
-        NetworkManager.shared.getFollowers(username: searchUsername, page: 1) { result in
-            
+        //network manager and self have strong refs to each other, so use weak self
+        NetworkManager.shared.getFollowers(username: searchUsername, page: 1) { [weak self] result in
+            guard let self = self else { return }
             switch result
             {
                 case .success(let followers):
@@ -52,27 +53,13 @@ class FollowerListVC: UIViewController {
 
     func addFollowerCollectionView()
     {
-        followerCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        followerCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(followerCollectionView)
         //followerCollectionView.backgroundColor = .systemPink
         followerCollectionView.register(GHFollowerCell.self, forCellWithReuseIdentifier: GHFollowerCell.reuseId)
     }
     
-    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout
-    {
-        let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minItemSpacing: CGFloat = 10
-        //the width of the cells combined
-        let availableWidth = width - (2*padding) - (2*minItemSpacing)
-        let itemWidth = availableWidth / 3
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        //add a little to the height since it has image and label
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        return flowLayout
-    }
+    
     
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: followerCollectionView, cellProvider: { collectionView, indexPath, follower -> UICollectionViewCell? in
@@ -90,6 +77,5 @@ class FollowerListVC: UIViewController {
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
-        
     }
 }
