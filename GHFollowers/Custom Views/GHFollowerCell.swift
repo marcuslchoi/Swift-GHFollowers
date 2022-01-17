@@ -29,6 +29,12 @@ class GHFollowerCell: UICollectionViewCell {
     {
         addSubview(avatarImageView)
         addSubview(usernameLabel)
+        usernameLabel.textAlignment = .center
+        
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        let img = UIImage(named: "avatar-placeholder")?.resizeImage(20.0, opaque: true)
+        avatarImageView.image = img!
+        usernameLabel.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 8
         
         let constraints = [
