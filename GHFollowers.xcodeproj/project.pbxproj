@@ -30,6 +30,7 @@
 		2CFA0A5A27973C54009065F6 /* GHSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A5927973C54009065F6 /* GHSecondaryTitleLabel.swift */; };
 		2CFA0A5C27973C65009065F6 /* GHBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A5B27973C65009065F6 /* GHBodyLabel.swift */; };
 		2CFA0A5E2797442B009065F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A5D2797442B009065F6 /* Constants.swift */; };
+		2CFA0A6027976A99009065F6 /* GHItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A5F27976A99009065F6 /* GHItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		2CFA0A5927973C54009065F6 /* GHSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		2CFA0A5B27973C65009065F6 /* GHBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBodyLabel.swift; sourceTree = "<group>"; };
 		2CFA0A5D2797442B009065F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CFA0A5F27976A99009065F6 /* GHItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				2CFA0A5727973C1E009065F6 /* GHTitleLabel.swift */,
 				2CFA0A5927973C54009065F6 /* GHSecondaryTitleLabel.swift */,
 				2CFA0A5B27973C65009065F6 /* GHBodyLabel.swift */,
+				2CFA0A5F27976A99009065F6 /* GHItemInfoView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				2CA148A62792084100EC2078 /* FollowerListVC.swift in Sources */,
 				2CFA0A5627973A9D009065F6 /* GHUserInfoHeaderVC.swift in Sources */,
 				2CA148BB279515D300EC2078 /* UIHelper.swift in Sources */,
+				2CFA0A6027976A99009065F6 /* GHItemInfoView.swift in Sources */,
 				2CA148BF279614AB00EC2078 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
