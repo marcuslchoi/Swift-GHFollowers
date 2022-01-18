@@ -4,7 +4,7 @@
 //
 //  Created by Marcus Choi on 1/18/22.
 //
-
+//a view with an image (sf symbol), title for the image (user property), and count related to the title
 import UIKit
 
 enum ItemInfoType {

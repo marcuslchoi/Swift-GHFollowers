@@ -33,4 +33,9 @@ class GHButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
     }
 
+    //in case we want to change these properties after init
+    func set(backgroundColor: UIColor, title: String) {
+        self.backgroundColor = backgroundColor
+        setTitle(title, for: .normal)
+    }
 }
