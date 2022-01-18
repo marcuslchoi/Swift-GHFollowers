@@ -11,6 +11,7 @@ class UserInfoVC: UIViewController {
     
     //headerView is the container view for our user info header view controller
     let headerView = UIView()
+    //item views are the cards showing repos and followers
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
     let dateLabel = GHBodyLabel(textAlignment: .center)
@@ -38,6 +39,10 @@ class UserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GHUserInfoHeaderVC(user: user), to: self.headerView)
+                    self.add(childVC: GHRepoItemVC(user: user), to: self.itemViewOne)
+                    self.add(childVC: GHFollowerItemVC(user: user), to: self.itemViewTwo)
+                    let dateStr = user.createdAt.convertDateToDisplayFormat()
+                    self.dateLabel.text = "Joined in \(dateStr)"
                 }
             case .failure(let error):
                 print(error)
@@ -62,8 +67,7 @@ class UserInfoVC: UIViewController {
         let itemHeight: CGFloat = 140
         
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemGreen
+        
         
         for itemView in itemViews {
             view.addSubview(itemView)
