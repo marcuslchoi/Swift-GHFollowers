@@ -36,6 +36,7 @@
 		2CFA0A6727977211009065F6 /* GHFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A6627977211009065F6 /* GHFollowerItemVC.swift */; };
 		2CFA0A6927978405009065F6 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A6827978405009065F6 /* Date+Ext.swift */; };
 		2CFA0A6B27978441009065F6 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A6A27978441009065F6 /* String+Ext.swift */; };
+		2CFA0A6D2797909F009065F6 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA0A6C2797909F009065F6 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		2CFA0A6627977211009065F6 /* GHFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFollowerItemVC.swift; sourceTree = "<group>"; };
 		2CFA0A6827978405009065F6 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		2CFA0A6A27978441009065F6 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		2CFA0A6C2797909F009065F6 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				2CA148B82794FF9100EC2078 /* UIImage+Ext.swift */,
 				2CFA0A6827978405009065F6 /* Date+Ext.swift */,
 				2CFA0A6A27978441009065F6 /* String+Ext.swift */,
+				2CFA0A6C2797909F009065F6 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				2CFA0A5827973C1E009065F6 /* GHTitleLabel.swift in Sources */,
 				2CA148A22791F9FD00EC2078 /* GHButton.swift in Sources */,
+				2CFA0A6D2797909F009065F6 /* UIViewController+Ext.swift in Sources */,
 				2CA148AF27922D3600EC2078 /* Follower.swift in Sources */,
 				2CFA0A5A27973C54009065F6 /* GHSecondaryTitleLabel.swift in Sources */,
 				2CFA0A6227976E83009065F6 /* GHItemInfoVC.swift in Sources */,

@@ -22,8 +22,8 @@ class GHFollowerItemVC: GHItemInfoVC {
     }
     
     
-//    override func actionButtonTapped() {
-//        delegate.didTapGetFollowers(for: user)
-//    }
+    override func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
+    }
 
 }

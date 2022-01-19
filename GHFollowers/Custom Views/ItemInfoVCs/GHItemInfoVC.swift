@@ -16,7 +16,7 @@ class GHItemInfoVC: UIViewController {
     let actionButton    = GHButton()
     
     var user: User!
-    //weak var delegate: UserInfoVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     
     init(user: User) {
@@ -36,8 +36,16 @@ class GHItemInfoVC: UIViewController {
         configureActionButton()
         layoutUI()
         configureStackView()
+        configureActionButton()
     }
     
+    private func configureActionButton()
+    {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    //this will be overriden in subclasses
+    @objc func actionButtonTapped() {}
     
     private func configureBackgroundView() {
         view.layer.cornerRadius = 18
@@ -52,16 +60,7 @@ class GHItemInfoVC: UIViewController {
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
-    
-    
-    private func configureActionButton() {
-        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
-    }
-    
-    
-    @objc func actionButtonTapped() {}
-    
-    
+
     private func layoutUI() {
         view.addSubview(stackView)
         view.addSubview(actionButton)
