@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: AnyObject {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
 
     //sections of collection view
@@ -119,6 +123,8 @@ extension FollowerListVC: UICollectionViewDelegate {
         let activeFollowersArr = isSearching ? filteredFollowers : allFollowers
         let selectedFollower = activeFollowersArr[indexPath.item]
         let destVC = UserInfoVC()
+        //if get followers tapped on the user info page, follower list vc will know
+        destVC.delegate = self
         destVC.username = selectedFollower.login
         let navController = UINavigationController(rootViewController: destVC)
         present(navController, animated: true)
@@ -137,4 +143,21 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         updateData(followers: allFollowers)
         isSearching = false
     }
+}
+
+extension FollowerListVC: FollowerListVCDelegate {
+    func didRequestFollowers(for username: String) {
+        self.searchUsername = username
+        title = username
+        currPage = 1
+        hasMoreFollowers = true
+        isSearching = false
+        allFollowers.removeAll()
+        filteredFollowers.removeAll()
+        //scroll to top
+        followerCollectionView.setContentOffset(.zero, animated: true)
+        getFollowers()
+    }
+    
+    
 }

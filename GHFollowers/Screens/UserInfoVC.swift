@@ -22,6 +22,7 @@ class UserInfoVC: UIViewController {
     let dateLabel = GHBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +127,7 @@ extension UserInfoVC: UserInfoVCDelegate {
 //            return
 //        }
 //        
-//        delegate.didRequestFollowers(for: user.login)
-//        dismssVC()
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 }
