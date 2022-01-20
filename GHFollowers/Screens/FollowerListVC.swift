@@ -49,7 +49,21 @@ class FollowerListVC: UIViewController {
     }
     
     @objc func addButtonTapped() {
-        
+        NetworkManager.shared.getUserInfo(username: self.searchUsername) { result in
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                PersistenceManager.updateWith(favorite: favorite, actionType: PersistenceActionType.add) { error in
+                    guard let error = error else {
+                        print("successfully added \(user.login) to favorites")
+                        return
+                    }
+                    print("failed to update favorites: \(error.rawValue)")
+                }
+            case .failure(let error):
+                print("failed to get user info: \(error.rawValue)")
+            }
+        }
     }
     
     func getFollowers()
