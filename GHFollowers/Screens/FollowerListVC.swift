@@ -30,8 +30,7 @@ class FollowerListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
+        configureViewController()
         addFollowerCollectionView()
         configureDataSource()
         configureSearchController()
@@ -39,6 +38,18 @@ class FollowerListVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         getFollowers()
+    }
+    
+    func configureViewController()
+    {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc func addButtonTapped() {
+        
     }
     
     func getFollowers()
