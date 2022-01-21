@@ -21,7 +21,8 @@ class GHFollowerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setFollower(follower: Follower) {
+    //download the image
+    func setFollowerNameAndImage(follower: Follower) {
         usernameLabel.text = follower.login
         avatarImageView.downloadImage(from: follower.avatarUrl)
     }

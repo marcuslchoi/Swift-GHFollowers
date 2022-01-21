@@ -19,7 +19,7 @@ enum PersistenceManager {
         static let favorites = "favorites"
     }
     
-    //retrieve favorites, update, then save
+    //retrieve favorites from user defaults, update (add or remove), then save back to user defaults
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completion: @escaping (GHError?) -> Void) {
         retrieveFavorites { result in
             switch result {

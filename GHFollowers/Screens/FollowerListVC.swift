@@ -5,6 +5,8 @@
 //  Created by Marcus Choi on 1/14/22.
 //
 
+//get followers (login and avatar url), then update data creates the snapshot of cells to display, then dequeue reusable cells downloads the images (current understanding)
+
 import UIKit
 
 protocol FollowerListVCDelegate: AnyObject {
@@ -48,6 +50,7 @@ class FollowerListVC: UIViewController {
         navigationItem.rightBarButtonItem = addButton
     }
     
+    //get the user's user info so we an turn it into a Follower object and download their avatar
     @objc func addButtonTapped() {
         NetworkManager.shared.getUserInfo(username: self.searchUsername) { result in
             switch result {
@@ -85,7 +88,7 @@ class FollowerListVC: UIViewController {
                     } else {
                         self.hasMoreFollowers = false
                     }
-                    //call update data once we get followers
+                //call update data once we get followers
                 self.updateData(followers: self.allFollowers)
                 case .failure(let ghError):
                     print(ghError.rawValue)
@@ -114,11 +117,13 @@ class FollowerListVC: UIViewController {
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: followerCollectionView, cellProvider: { collectionView, indexPath, follower -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GHFollowerCell.reuseId, for: indexPath) as! GHFollowerCell
-            cell.setFollower(follower: follower)
+            //downloads the image
+            cell.setFollowerNameAndImage(follower: follower)
             return cell
         })
     }
     
+    //create a new snapshot to display the followers
     func updateData(followers: [Follower])
     {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
