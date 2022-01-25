@@ -36,6 +36,7 @@ class SearchVC: UIViewController {
         }
         else
         {
+            presentGHAlertOnMainThread(title: "No Username", message: "Please enter a username", buttonTitle: "Ok")
             print("Please enter a username")
         }
     }

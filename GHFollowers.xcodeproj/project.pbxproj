@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C703C4727A0B6C600AB313E /* GHAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C703C4627A0B6C600AB313E /* GHAlertVC.swift */; };
 		2CA1488A2790AB9E00EC2078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA148892790AB9E00EC2078 /* AppDelegate.swift */; };
 		2CA1488C2790AB9E00EC2078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1488B2790AB9E00EC2078 /* SceneDelegate.swift */; };
 		2CA148932790ABA400EC2078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA148922790ABA400EC2078 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C703C4627A0B6C600AB313E /* GHAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAlertVC.swift; sourceTree = "<group>"; };
 		2CA148862790AB9E00EC2078 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA148892790AB9E00EC2078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA1488B2790AB9E00EC2078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		2CA148A827920C8500EC2078 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C703C4627A0B6C600AB313E /* GHAlertVC.swift */,
 				2CA148A12791F9FD00EC2078 /* GHButton.swift */,
 				2CA148A32791FA2500EC2078 /* GHTextField.swift */,
 				2CA148B627936BBB00EC2078 /* GHFollowerCell.swift */,
@@ -302,6 +305,7 @@
 				2CFA0A65279771BB009065F6 /* GHRepoItemVC.swift in Sources */,
 				2CA148A62792084100EC2078 /* FollowerListVC.swift in Sources */,
 				2CFA0A5627973A9D009065F6 /* GHUserInfoHeaderVC.swift in Sources */,
+				2C703C4727A0B6C600AB313E /* GHAlertVC.swift in Sources */,
 				2CA148BB279515D300EC2078 /* UIHelper.swift in Sources */,
 				2CFA0A6027976A99009065F6 /* GHItemInfoView.swift in Sources */,
 				2CA148BF279614AB00EC2078 /* UserInfoVC.swift in Sources */,
