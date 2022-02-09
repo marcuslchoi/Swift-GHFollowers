@@ -33,12 +33,12 @@ class NetworkManager {
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    completion(.failure(.invalidResponse))
+                completion(.failure(.invalidResponse))
                 return
             }
             
             guard let data = data else {
-                        completion(.failure(.invalidData))
+                completion(.failure(.invalidData))
                 return
             }
             
